@@ -57,23 +57,8 @@ void Downloader::process()
 			ffmpeg_proc->waitForFinished();
 			qDebug() << QString("Download finished, Merge file successfully, output file name: " + this->__base_save_path + this->__download_parts + ".mp4");
 
-#ifdef Q_OS_LINUX
-			QString rm_exec = "rm";
-			QStringList rm_args;
-			QProcess *rm_proc = new QProcess();
-
-			rm_args << "-rf" << video_file->fileName() << audio_file->fileName();
-			rm_proc->start(rm_exec, rm_args);
-			rm_proc->waitForFinished();
-#elif defined Q_OS_WIN
-			QString rm_exec = "del";
-			QStringList rm_args;
-			QProcess *rm_proc = new QProcess();
-
-			rm_args << "/q" << video_file->fileName() << audio_file->fileName();
-			rm_proc->start(rm_exec, rm_args);
-			rm_proc->waitForFinished();
-#endif
+			video_file->remove();
+			audio_file->remove();
 
 			emit finished(__index);
 		});

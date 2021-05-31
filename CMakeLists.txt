@@ -11,22 +11,24 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(CMAKE_CXX_FLAGS "-mwindows")
+IF (CMAKE_SYSTEM_NAME MATCHES "Windows")
+    set(CMAKE_CXX_FLAGS "-mwindows")
+ENDIF()
 
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Network REQUIRED)
 
 set(PROJECT_SOURCES
-        main.cc
-        mainwindow.cc
-        mainwindow.hh
-        mainwindow.ui
-        urllist.hh
-        urllist.cc
-        urllist.ui
-        downloader.hh
-        downloader.cc
+    main.cc
+    mainwindow.cc
+    mainwindow.hh
+    mainwindow.ui
+    urllist.hh
+    urllist.cc
+    urllist.ui
+    downloader.hh
+    downloader.cc
 )
 
 add_executable(BVDownloader_Qt5

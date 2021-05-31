@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.17)
 
-project(BVDownloader_Qt5 VERSION 0.3.0 LANGUAGES CXX)
+project(BVDownloader_Qt5 VERSION 1.0.2 LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 

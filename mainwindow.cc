@@ -61,7 +61,11 @@ void MainWindow::on_pushButton_clicked()
 	URLList *urllist = new URLList();
 
 	QObject::connect(urllist, SIGNAL(ready_download(QString,QString,QString,QString,QString)), this, SLOT(start_download(QString,QString,QString,QString,QString)));
-	urllist->parsing(this->ui->url_edit->text());
+	
+	if (this->ui->url_edit->text().contains("http", Qt::CaseSensitive))
+		urllist->parsing(QUrl(this->ui->url_edit->text()).path().split("/")[2]);
+	else
+		urllist->parsing(this->ui->url_edit->text());
 
 	return;
 }

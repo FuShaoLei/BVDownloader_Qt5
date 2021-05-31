@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include <QString>
-#include <QtDebug>
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 #include <QNetworkReply>

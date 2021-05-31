@@ -55,7 +55,6 @@ void Downloader::process()
 			ffmpeg_args << "-i" << video_file->fileName() << "-i" << audio_file->fileName() << "-codec" << "copy" << this->__base_save_path + this->__download_parts + ".mp4" << "-y";
 			ffmpeg_proc->start(ffmpeg_exec, ffmpeg_args);
 			ffmpeg_proc->waitForFinished();
-			qDebug() << QString("Download finished, Merge file successfully, output file name: " + this->__base_save_path + this->__download_parts + ".mp4");
 
 			video_file->remove();
 			audio_file->remove();

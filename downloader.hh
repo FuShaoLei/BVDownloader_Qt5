@@ -2,7 +2,6 @@
 #define DOWNLOADER_HH
 
 #include <QObject>
-#include <QDebug>
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 #include <QNetworkReply>

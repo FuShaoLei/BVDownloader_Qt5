@@ -2,7 +2,6 @@
 #define MAINWINDOW_HH
 
 #include <QMainWindow>
-#include <QDebug>
 #include <QVector>
 #include <QString>
 #include <QFile>

@@ -108,6 +108,7 @@ void URLList::parsing(QString bvid)
 			request_url_query.addQueryItem("fnval", QString::number(16));
 			request_url_query.addQueryItem("qn", QString::number(80));
 			request_url_query.addQueryItem("id", QString::number(___));
+			request_url_query.addQueryItem("fourk", QString::number(1));
 			request_url.setQuery(request_url_query);
 
 			download_request.setUrl(request_url);

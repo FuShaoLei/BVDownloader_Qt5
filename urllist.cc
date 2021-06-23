@@ -7,7 +7,7 @@ URLList::URLList(QWidget *parent) :
 {
 	ui->setupUi(this);
 
-	this->__download_path = QStandardPaths::writableLocation(QStandardPaths::DownloadLocation) + "/";
+	this->__download_path = QStandardPaths::writableLocation(QStandardPaths::MoviesLocation) + "/";
 	this->ui->download_path->setText(this->__download_path);
 
 	return;

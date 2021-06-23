@@ -66,7 +66,7 @@ void URLList::parsing(QString bvid)
 			QJsonObject dash = data.value("dash").toObject();
 			QJsonArray video = dash.value("video").toArray();
 			QJsonArray audio = dash.value("audio").toArray();
-			QJsonObject video_0 = video.at(0).toObject();
+			QJsonObject video_0 = video.at(1).toObject();
 			QJsonObject audio_0 = audio.at(0).toObject();
 
 			QString video_URL = video_0.value("baseUrl").toString();

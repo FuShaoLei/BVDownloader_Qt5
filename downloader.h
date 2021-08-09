@@ -1,5 +1,5 @@
-#ifndef DOWNLOADER_HH
-#define DOWNLOADER_HH
+#ifndef DOWNLOADER_H
+#define DOWNLOADER_H
 
 #include <QObject>
 #include <QNetworkAccessManager>
@@ -41,4 +41,4 @@ private:
 	QString __base_save_path;
 };
 
-#endif // DOWNLOADER_HH
+#endif // DOWNLOADER_H

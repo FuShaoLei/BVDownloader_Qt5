@@ -1,5 +1,5 @@
-#ifndef URLLIST_HH
-#define URLLIST_HH
+#ifndef URLLIST_H
+#define URLLIST_H
 
 #include <QMainWindow>
 #include <QString>
@@ -50,4 +50,4 @@ private:
 	QString __download_path;
 };
 
-#endif // URLLIST_HH
+#endif // URLLIST_H

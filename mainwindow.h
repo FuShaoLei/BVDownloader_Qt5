@@ -1,5 +1,5 @@
-#ifndef MAINWINDOW_HH
-#define MAINWINDOW_HH
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
 #include <QMainWindow>
 #include <QVector>
@@ -8,8 +8,8 @@
 #include <QProcess>
 #include <QThread>
 
-#include "urllist.hh"
-#include "downloader.hh"
+#include "urllist.h"
+#include "downloader.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -33,4 +33,4 @@ private:
 
 	int __downloads;
 };
-#endif // MAINWINDOW_HH
+#endif // MAINWINDOW_H

@@ -1,4 +1,4 @@
-#include "urllist.hh"
+#include "urllist.h"
 #include "ui_urllist.h"
 
 URLList::URLList(QWidget *parent) :
